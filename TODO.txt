@@ -1,0 +1,29 @@
+code:
+
+src/cocogan_train.py
+-add the new div_dis_update method
+
+src/trainers/cocogan_trainer.py
+-remove _compute_kl methods in gen_update and add loss for divergence discriminator (from AVB paper)
+-add div_dis_update method to train the divergence discriminator (from AVB paper)
+
+src/trainers/cocogan_nets.py
+-remove GaussianNoiseLayer in COCOResGen (from middle shared layer)
+-change forward in COCOResGen to take in 2 noise inputs
+-change architecture of COCOResGen slightly to accomodate these 2 noise inputs
+-add new COCODivDis class for divergence discriminator architecture (from AVB paper)
+
+compare this to baseline results:
+
+download dataset
+generate results from both models
+
+paper:
+
+introduction to topic
+talk about UNIT
+talk about AVB
+discuss our contribution
+discuss our experiments
+show results
+conclusion

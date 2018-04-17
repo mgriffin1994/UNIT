@@ -18,8 +18,7 @@ compare this to baseline results:
 download dataset
 generate results from both models
 
-paper:
-
+Proposal:
 introduction to topic
 talk about UNIT
 talk about AVB

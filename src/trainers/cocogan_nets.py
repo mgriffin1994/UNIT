@@ -157,6 +157,21 @@ class COCODis(nn.Module):
     outs_B.append(out_B)
     return outs_A, outs_B
 
+class COCOKLDis(nn.Module):
+    
+    def __init__(self, params):
+        return
+    
+    def _make_net(self, ...):
+        return
+        
+    def cuda(self, gpu):
+        return
+        
+    def forward(self, x, z):
+        
+        
+
 class COCOResGen(nn.Module):
 # In COCOResGen, the first convolutional layers in the encoders are based on LeakyReLU with no normalization layers.
 # But all the other non residual-block based layers are based on ReLU with Instance Norm activation.

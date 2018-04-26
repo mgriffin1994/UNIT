@@ -143,7 +143,6 @@ class LeakyReLUBNConv2d(nn.Module):
   def forward(self, x):
     return self.model(x)
 
-
 class LeakyReLUBNConvTranspose2d(nn.Module):
   def __init__(self, n_in, n_out, kernel_size, stride, padding=0, output_padding=0):
     super(LeakyReLUBNConvTranspose2d, self).__init__()

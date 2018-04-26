@@ -331,8 +331,8 @@ class COCOResGen2(nn.Module):
         # Convolutional front-end
         encA = []
         encB = []
-        encA += [LeakyReLUConv2d(input_dim_a*2, ch, kernel_size=7, stride=1, padding=3)]
-        encB += [LeakyReLUConv2d(input_dim_b*2, ch, kernel_size=7, stride=1, padding=3)]
+        encA += [LeakyReLUConv2d(input_dim_a, ch, kernel_size=7, stride=1, padding=3)]
+        encB += [LeakyReLUConv2d(input_dim_b, ch, kernel_size=7, stride=1, padding=3)]
         tch = ch
         for i in range(1,n_enc_front_blk):
             encA += [LeakyReLUConv2d(tch, tch * 2, kernel_size=3, stride=2, padding=1)]
@@ -351,7 +351,7 @@ class COCOResGen2(nn.Module):
         enc_shared = []
         for i in range(0, n_enc_shared_blk):
             enc_shared += [INSResBlock(tch, tch, dropout=res_dropout_ratio)]
-        #enc_shared += [GaussianNoiseLayer()]
+        enc_shared += [GaussianNoiseLayer()]
         dec_shared = []
         for i in range(0, n_gen_shared_blk):
             dec_shared += [INSResBlock(tch, tch, dropout=res_dropout_ratio)]

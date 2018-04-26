@@ -62,7 +62,7 @@ def main(argv):
       # Main training code
       trainer.dis_update(images_a, images_b, config.hyperparameters)
       image_outputs = trainer.gen_update(images_a, images_b, config.hyperparameters)
-      trainer.kl_dis_up(images_a, images_b, config.hyperparameters)
+      trainer.kl_dis_update(images_a, images_b, config.hyperparameters)
       assembled_images = trainer.assemble_outputs(images_a, images_b, image_outputs)
 
       # Dump training stats in log file

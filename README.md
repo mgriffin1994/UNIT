@@ -1,6 +1,7 @@
 ## AVB-GTN: Adverserial Variational Bayes Generative Translation Network
 
 Work based off of that in UNIT: UNsupervised Image-to-image Translation Networks
+
 Latex report just added.
 
 
